@@ -131,8 +131,7 @@ body {
   transition: opacity 2s ease-in-out;
   height: 100%;
   left: 0;
-#opacity;
-  opacity: 0;
+  opacity: 1;
   position: fixed;
   top: 0;
   width: 100%;
