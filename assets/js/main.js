@@ -41,6 +41,7 @@
 							'images/Paris-64.jpg': 'bottom'
 							'images/Antelope1.jpg': 'center'
 							'images/Paris-112.jpg': 'center'
+							'images/Samos-52.jpg': 'bottom'
 							'images/Barcelona1.jpg': 'bottom'
 			
 						},
