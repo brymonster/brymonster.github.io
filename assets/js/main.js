@@ -36,10 +36,10 @@
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'images/BRY_8479.jpg': 'center',
+							'images/BRY_8479.jpg': 'bottom',
 							'images/JQYS7790.JPG': 'top',
 							'images/Paris-64.jpg': 'bottom'
-							},
+						},
 
 					// Delay.
 						delay: 10000
