@@ -10,6 +10,22 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Ensure the footer spans the full width and centers the widget */
+			footer#footer {
+				text-align: center;
+				padding: 20px;
+				background-color: #000;
+				color: #fff;
+			}
+			
+			.weatherwidget-io {
+				display: block;
+				margin: 0 auto;
+				width: 100%; /* Adjust this value if needed */
+				max-width: 600px; /* Adjust this value if needed */
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -28,20 +44,11 @@
 
 		<!-- Footer -->
 			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
 				<!-- Weather Widget -->
-				<a class="weatherwidget-io" href="https://forecast7.com/en/41d51n73d60/patterson/?unit=us" data-label_1="PATTERSON" data-font="Roboto" data-icons="Climacons Animated" data-shadow="#787878" data-textcolor="#ffffff" data-highcolor="#ffffff" data-lowcolor="#ffffff" data-suncolor="#fff100" data-mooncolor="#ffffff" data-cloudcolor="#ffffff" data-cloudfill="#ffffff" data-raincolor="#0057ff" data-snowcolor="#ffffff" >PATTERSON</a>
+				<a class="weatherwidget-io" href="https://forecast7.com/en/41d51n73d60/patterson/?unit=us" data-label_1="PATTERSON" data-font="Roboto" data-icons="Climacons Animated" data-shadow="#787878" data-textcolor="#ffffff" data-highcolor="#ffffff" data-lowcolor="#ffffff" data-suncolor="#fff100" data-mooncolor="#ffffff" data-cloudcolor="#ffffff" data-cloudfill="#ffffff" data-raincolor="#0057ff" data-snowcolor="#ffffff">PATTERSON</a>
 				<script>
 					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 				</script>
-				<ul class="copyright">
-					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
 			</footer>
 
 		<!-- Scripts -->
