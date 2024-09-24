@@ -37,7 +37,7 @@
 					// Images (in the format of 'url': 'alignment').
 						images: {
 							'images/BRY_8479.jpg': 'bottom',
-							'images/BRY_8810.jpg': 'bottom',
+							'images/JQYS7790.JPG': 'bottom',
 							'images/Paris-64.jpg': 'bottom'
 						},
 
