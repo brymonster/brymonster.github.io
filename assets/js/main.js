@@ -36,9 +36,13 @@
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'images/BRY_8479.jpg': 'bottom',
+							'images/BRY_8479.jpg': 'center',
 							'images/JQYS7790.JPG': 'top',
 							'images/Paris-64.jpg': 'bottom'
+							'images/Antelope1.jpg': 'center'
+							'images/Paris-112.jpg': 'center'
+							'images/Barcelona1.jpg': 'bottom'
+			
 						},
 
 					// Delay.
