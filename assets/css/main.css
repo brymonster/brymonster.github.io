@@ -435,7 +435,7 @@ header h1 a {
 /* Footer */
 footer {
   position: fixed;
-  bottom: 3em;
+  bottom: 6em;
   left: 0;
   right: 0;
   height: 3em;
