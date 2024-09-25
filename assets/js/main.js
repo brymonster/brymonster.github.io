@@ -38,6 +38,9 @@
 						images: {
 							'images/JQYS7790.JPG': 'top',
 							'images/Paris-64.jpg': 'bottom'
+							'images/Barcelona1.jpg': 'bottom'
+							'images/Aruba1.jpg': 'bottom'
+							'images/PuertoRico1.jpg': 'bottom'
 						},
 
 					// Delay.
