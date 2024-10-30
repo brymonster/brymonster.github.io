@@ -1,32 +1,63 @@
 <!DOCTYPE HTML>
-<!--
-	
--->
 <html>
-	<head>
-		<title>dash</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
+<head>
+	<title>dash</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
 
-		<!-- Header -->
-			<header id="header">
-				<center><h1>dash</h1></center>
-			</header>
-		
-		<footer id="footer">
+	<!-- Header -->
+	<header id="header">
+		<center><h1>dash</h1></center>
+	</header>
 
-			<div id="weather-widget">
-<div id="ww_be82c798ef852" v='1.3' loc='auto' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"7","cl_odd":"#00000000","el_nme":3}'>Weather Data Source: <a href="https://wetterlang.de/wetter_21_tage/" id="ww_be82c798ef852_u" target="_blank">Wettervorhersage 21 tage</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_be82c798ef852"></script>
-        </div>
-		
-		</footer>
-		
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+	<!-- Calendar Container -->
+	<div id="calendar" style="width: 100%; height: 600px;"></div>
+	
+	<footer id="footer">
+		<!-- Weather Widget -->
+		<div id="weather-widget">
+			<div id="ww_be82c798ef852" v='1.3' loc='auto' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"#FFFFFF00","cl_font":"rgba(255,255,255,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"7","cl_odd":"#00000000","el_nme":3}'>Weather Data Source: <a href="https://wetterlang.de/wetter_21_tage/" id="ww_be82c798ef852_u" target="_blank">Wettervorhersage 21 tage</a></div>
+			<script async src="https://app3.weatherwidget.org/js/?id=ww_be82c798ef852"></script>
+		</div>
+	</footer>
 
-	</body>
+	<!-- Scripts -->
+	<script src="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		// JSON configuration
+		const calendarConfig = {
+			controls: ["date"],
+			css: ".event, .dhx_cal_tab.active, .dhx_cal_tab.active:hover {background-color: #c0c0c0;} .dhx_month_head, .dhx_cal_tab, .dhx_cal_today_button {color: #c0c0c0;} .dhx_cal_tab, .dhx_cal_tab.active {border-color: #c0c0c0;}.dhx_scale_holder_now, .dhx_now .dhx_month_head, .dhx_now .dhx_month_body { background-color: #ffffff;}.dhx_month_body, .dhx_month_head, .dhx_cal_container { background-color: #ffffff; }.dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: #606060; }",
+			ending_hour: 17,
+			hour_division: 4,
+			hour_format: "%g:%i %a",
+			skin: "flat",
+			start_of_week: "su",
+			starting_hour: 8,
+			tab: "agenda",
+			tabs: [],
+			timezone: "America/New_York",
+			url: "webcal://p141-caldav.icloud.com/published/2/MTA4MTI5NzE4NzEwODEyOaT6YIcnZQ3qNkp-yVRkk1Ye6Z1cIpg0emI-1qsN8G0e1NNsYTym9WFiHhTkontB3dffgV12MmmpdLTaFOnR8iM"
+		};
+
+		// Initialize the scheduler
+		scheduler.init("calendar", new Date(), "month");
+		scheduler.config.hour_date = calendarConfig.hour_format;
+		scheduler.config.first_hour = calendarConfig.starting_hour;
+		scheduler.config.last_hour = calendarConfig.ending_hour;
+
+		// Apply CSS from JSON config
+		const style = document.createElement("style");
+		style.innerHTML = calendarConfig.css;
+		document.head.appendChild(style);
+	</script>
+
+</body>
 </html>
